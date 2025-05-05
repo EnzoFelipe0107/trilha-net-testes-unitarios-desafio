@@ -1,3 +1,4 @@
+using Xunit;
 using TestesUnitarios.Desafio.Console.Services;
 
 namespace TestesUnitarios.Desafio.Tests;
@@ -9,11 +10,9 @@ public class ValidacoesStringTests
     [Fact]
     public void DeveRetornar6QuantidadeCaracteresDaPalavraMatrix()
     {
-        //TODO: Corrigir a variável "texto" e "resultadoEsperado" da seção Arrange
-
         // Arrange
-        var texto = "a";
-        var resultadoEsperado = 0;
+        var texto = "Matrix"; // Correção do valor da variável texto
+        var resultadoEsperado = 6; // Correção do valor esperado
 
         // Act
         var resultado = _validacoes.RetornarQuantidadeCaracteres(texto);
@@ -29,13 +28,11 @@ public class ValidacoesStringTests
         var texto = "Esse é um texto qualquer";
         var textoProcurado = "qualquer";
 
-        //TODO: Corrigir a chamada do método "ContemCaractere" da seção Act
         // Act
-         _validacoes.ContemCaractere(texto, textoProcurado);
+        var resultado = _validacoes.ContemCaractere(texto, textoProcurado); // Correção da chamada do método
 
         // Assert
-        //TODO: Corrigir o Assert.True com base no retorno da chamada ao método
-        Assert.True(true);
+        Assert.True(resultado); // Correção do Assert.True
     }
 
     [Fact]
@@ -49,18 +46,15 @@ public class ValidacoesStringTests
         var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
 
         // Assert
-        //TODO: Corrigir o Assert.False com base no retorno da chamada ao método
-        Assert.False(true);
+        Assert.False(resultado); // Correção do Assert.False
     }
 
-    //TODO: Corrigir a anotação [Fact]
+    [Fact] // Correção da anotação
     public void TextoDeveTerminarComAPalavraProcurado()
     {
-        //TODO: Corrigir a variável "textoProcurado" seção Arrange
-
         // Arrange
         var texto = "Começo, meio e fim do texto procurado";
-        var textoProcurado = "teste";
+        var textoProcurado = "procurado"; // Correção do valor de textoProcurado
 
         // Act
         var resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);
